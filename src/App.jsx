@@ -18,8 +18,8 @@ function Hero() {
       </div>
 
       {/* Contenido: título, quote, logos */}
-      <div className="w-full flex flex-col items-center text-center px-8 pt-4 pb-14 gap-2 bg-black">
-        <img src="/logo-kh.svg" alt="KRANKENHAUS" className="w-full max-w-xs object-contain" />
+      <div className="w-full flex flex-col items-center text-center px-8 pt-8 pb-5 gap-2 -mt-[100px] relative z-10" style={{ background: 'linear-gradient(to bottom, transparent 0%, black 30%)' }}>
+        <img src="/logo-kh.svg" alt="KRANKENHAUS" className="w-full max-w-[220px] object-contain" />
         <p className="text-white text-sm max-w-xs leading-relaxed">
           "Santamuerte es una banda que desafía el miedo a la muerte..."{' '}
           <strong>— Radio Cocoa</strong>.
@@ -244,7 +244,7 @@ function LaBanda() {
           sin concesiones desafían el miedo a la muerte.
         </p>
         <a
-          href="mailto:contacto@santamuerte.com"
+          href="https://wa.me/593999400777"
           className="px-10 py-3 bg-white rounded-[50px] text-black text-sm font-bold font-sans text-center"
         >
           Contrátanos 👈
