@@ -124,9 +124,6 @@ function TourHighlights() {
           Quitofest — Quito, Ecuador (2023){'\n'}
           Umsonst und Draussen — Karlstadt, Alemania (2018)
         </p>
-        <p className="w-full text-center text-white text-xs font-bold font-sans">
-          Producido por Daniel Alba.
-        </p>
       </div>
     </section>
   )
@@ -250,7 +247,7 @@ function LaBanda() {
           href="mailto:contacto@santamuerte.com"
           className="px-10 py-3 bg-white rounded-[50px] text-black text-sm font-bold font-sans text-center"
         >
-          CONTRATACIONES Y ENTREVISTAS
+          Contrátanos 👈
         </a>
       </div>
     </section>
