@@ -64,7 +64,7 @@ function MusicPlayer() {
         />
       </div>
       <a
-        href="https://linktr.ee/santamuerte"
+        href="https://www.submithub.com/link/santamuerte-krankenhaus"
         target="_blank"
         rel="noopener noreferrer"
         className="text-Krankenhaus text-xs md:text-sm underline underline-offset-4 font-sans mt-3"
