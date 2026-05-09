@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaDeezer, FaAmazon } from 'react-icons/fa'
+import { SiYoutubemusic } from 'react-icons/si'
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
@@ -268,6 +270,73 @@ function LaBanda() {
   )
 }
 
+// ─── Footer ──────────────────────────────────────────────────────────────────
+
+function Footer() {
+  const sociales = [
+    { icon: FaInstagram, href: 'https://www.instagram.com/santamuerte.de/', label: 'Instagram' },
+    { icon: FaYoutube, href: 'https://www.youtube.com/@santamuertemusic', label: 'YouTube' },
+    { icon: FaTiktok, href: 'https://www.tiktok.com/@santamuerte.de', label: 'TikTok' },
+    { icon: FaFacebook, href: 'https://www.facebook.com/santamuerte.de/', label: 'Facebook' },
+  ]
+
+  const streaming = [
+    { icon: FaSpotify, href: 'https://open.spotify.com/artist/74NZthZThe5AOubJ3r0nGz?si=s2Xlx0u9Sda1QHJo9388Fg', label: 'Spotify' },
+    { icon: FaApple, href: 'https://music.apple.com/us/artist/santamuerte/1581960487', label: 'Apple Music' },
+    { icon: SiYoutubemusic, href: 'https://music.youtube.com/@santamuertemusic', label: 'YouTube Music' },
+    { icon: FaAmazon, href: 'https://music.amazon.com/artists/B011DOW36U/santamuerte', label: 'Amazon Music' },
+    { icon: FaDeezer, href: 'https://www.deezer.com/mx/artist/8442084', label: 'Deezer' },
+  ]
+
+  return (
+    <footer className="bg-black px-8 md:px-16 pt-10 pb-12 flex flex-col items-center gap-8 border-t border-zinc-900">
+      <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-8 object-contain opacity-80" />
+
+      {/* Redes sociales */}
+      <div className="flex flex-col items-center gap-3">
+        <p className="text-gray-600 text-[10px] tracking-widest uppercase">Redes sociales</p>
+        <div className="flex items-center gap-6">
+          {sociales.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-white/60 hover:text-white transition-colors duration-200"
+            >
+              <Icon size={24} />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Plataformas de streaming */}
+      <div className="flex flex-col items-center gap-3">
+        <p className="text-gray-600 text-[10px] tracking-widest uppercase">Escúchanos en</p>
+        <div className="flex items-center gap-6 flex-wrap justify-center">
+          {streaming.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-white/60 hover:text-white transition-colors duration-200"
+            >
+              <Icon size={22} />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <p className="text-gray-700 text-[10px] tracking-widest">
+        © {new Date().getFullYear()} Santamuerte. Todos los derechos reservados.
+      </p>
+    </footer>
+  )
+}
+
 // ─── App ─────────────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -281,6 +350,7 @@ export default function App() {
       <Logros />
       <Historia />
       <LaBanda />
+      <Footer />
     </div>
   )
 }
