@@ -6,12 +6,12 @@ function Hero() {
   return (
     <section className="bg-black flex flex-col items-center">
       {/* Nav */}
-      <nav className="w-full flex justify-center pt-6 pb-2 px-6 absolute z-10">
+      <nav className="w-full flex justify-center pt-6 pb-16 px-6 absolute z-10">
         <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-10 object-contain" />
       </nav>
 
       {/* Imagen habitación */}
-      <div className="w-full relative">
+      <div className="w-full relative mt-[50px]">
         <img src="/habitacion.png" alt="Krankenhaus" className="w-full object-cover" />
         {/* Gradiente inferior para fusionar con el contenido */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
