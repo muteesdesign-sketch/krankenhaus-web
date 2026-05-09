@@ -18,7 +18,7 @@ function Hero() {
       </div>
 
       {/* Contenido: título, quote, logos */}
-      <div className="w-full flex flex-col items-center text-center px-8 pt-4 pb-14 gap-5 bg-black">
+      <div className="w-full flex flex-col items-center text-center px-8 pt-4 pb-14 gap-2 bg-black">
         <img src="/logo-kh.svg" alt="KRANKENHAUS" className="w-full max-w-xs object-contain" />
         <p className="text-white text-sm max-w-xs leading-relaxed">
           "Santamuerte es una banda que desafía el miedo a la muerte..."{' '}
@@ -38,7 +38,7 @@ function Hero() {
 
 function MusicPlayer() {
   return (
-    <section className="bg-black px-8 pb-10 flex flex-col items-center gap-3">
+    <section className="bg-black px-8 pb-10 flex flex-col items-center gap-0">
       <div className="w-full rounded-xl overflow-hidden">
         <iframe
           src="https://open.spotify.com/embed/album/5XesW7QJQmcQy6VNzazIyK?utm_source=generator&theme=0"
@@ -96,11 +96,11 @@ function LiveVideo() {
         alt="El ritual en vivo"
         className="w-full object-cover rounded"
       />
-      <div className="relative w-full aspect-video">
+      <div className="relative w-full" style={{ aspectRatio: '9/16' }}>
         <iframe
           src="https://www.youtube.com/embed/U8c8pz2rgQc"
           title="El ritual: En vivo — Santamuerte"
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full rounded"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -140,27 +140,19 @@ function Logros() {
       <h2 className="w-full text-center text-Krankenhaus text-xl font-bold font-sans">
         Logros destacados
       </h2>
-      <div className="w-full flex flex-col gap-10">
-        <p className="w-full text-center text-sm font-sans leading-loose">
-          <strong className="text-white font-bold">NEW YORK TIMES: </strong>
-          <span className="text-white font-normal text-xs">
-            Música para el documental "The fastest girl alive - Nike".
-          </span>
-          {'\n\n'}
-          <strong className="text-white font-bold">NETFLIX: </strong>
-          <span className="text-white font-normal text-xs">
-            Música para la serie "Tex Mex Motors".
-          </span>
-          {'\n\n'}
-          <strong className="text-white font-bold">UNIVERSAL STUDIOS: </strong>
-          <span className="text-white font-normal text-xs">
-            Música para Halloween Horror Nights (Orlando).
-          </span>
-          {'\n\n'}
-          <strong className="text-white font-bold">RADIO 3 ESPAÑA: </strong>
-          <span className="text-white font-normal text-xs">Disco de la Semana 2016.</span>
-        </p>
-        <div className="w-full flex justify-center">
+      <div className="w-full flex flex-col gap-6">
+        {[
+          { nombre: 'NEW YORK TIMES', desc: 'Música para el documental "The fastest girl alive - Nike".' },
+          { nombre: 'NETFLIX', desc: 'Música para la serie "Tex Mex Motors".' },
+          { nombre: 'UNIVERSAL STUDIOS', desc: 'Música para Halloween Horror Nights (Orlando).' },
+          { nombre: 'RADIO 3 ESPAÑA', desc: 'Disco de la Semana 2016.' },
+        ].map(({ nombre, desc }) => (
+          <div key={nombre} className="w-full flex flex-col items-center gap-1">
+            <p className="text-white text-sm font-bold font-sans">{nombre}</p>
+            <p className="text-white text-xs font-normal font-sans text-center">{desc}</p>
+          </div>
+        ))}
+        <div className="w-full flex justify-center pt-4">
           <img
             src="/logos-prensa.png"
             alt="Universal — The New York Times — Netflix"
