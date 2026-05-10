@@ -9,43 +9,56 @@ import { SiYoutubemusic } from 'react-icons/si'
 
 function EPKHero() {
   return (
-    <section className="bg-black flex flex-col items-center relative">
-      <nav className="w-full flex justify-between items-center pt-6 pb-6 px-8 md:px-16">
-        <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-8 md:h-10 object-contain" />
-        <Link
-          to="/"
-          className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
-        >
-          ← Volver al sitio
-        </Link>
-      </nav>
-
+    <section className="bg-black flex flex-col items-center">
+      {/* Concert photo with SVG logo overlay */}
       <div className="w-full relative">
         <img
-          src="/habitacion.png"
-          alt="Santamuerte EPK"
-          className="w-full object-cover md:max-h-[500px] md:object-center"
+          src="/foto-portada-9.png"
+          alt="Santamuerte en vivo"
+          className="w-full object-cover md:max-h-[520px] md:object-top"
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 gap-3">
-          <p className="text-gray-400 text-xs tracking-[0.3em] uppercase font-sans">Electronic Press Kit</p>
+        {/* Dark gradient top and bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+        {/* SVG logo top center */}
+        <div className="absolute top-0 left-0 right-0 flex flex-col items-center pt-6">
           <img
-            src="/logo-santamuerte.svg"
+            src="/santamuerte-title.svg"
             alt="Santamuerte"
-            className="h-14 md:h-20 object-contain filter brightness-0 invert"
+            className="h-8 md:h-10 object-contain filter brightness-0 invert"
           />
-          <div className="flex items-center gap-3 flex-wrap justify-center">
-            <span className="text-Krankenhaus text-xs md:text-sm font-sans tracking-widest uppercase">Punk Blues</span>
-            <span className="text-white/40 text-xs">·</span>
-            <span className="text-white/70 text-xs md:text-sm font-sans">Cuenca, Ecuador</span>
-            <span className="text-white/40 text-xs">·</span>
-            <span className="text-white/70 text-xs md:text-sm font-sans">Desde 2013</span>
-          </div>
-          <p className="text-white/80 text-sm md:text-base font-sans italic max-w-xs md:max-w-md leading-relaxed mt-2">
-            "Santamuerte es una banda que desafía el miedo a la muerte con un sonido visceral que no pide permiso."
-          </p>
-          <p className="text-Krankenhaus text-xs font-sans">— Radio Cocoa</p>
         </div>
+        {/* Back link top right */}
+        <div className="absolute top-0 right-0 pt-6 pr-6">
+          <Link
+            to="/"
+            className="text-white/60 text-xs hover:text-white transition-colors font-sans"
+          >
+            ← Volver
+          </Link>
+        </div>
+      </div>
+
+      {/* Info block below photo */}
+      <div className="w-full flex flex-col items-center text-center px-8 md:px-16 pt-6 pb-8 gap-3 bg-black">
+        {/* Band name as SVG */}
+        <img
+          src="/santamuerte-title.svg"
+          alt="Santamuerte"
+          className="w-full max-w-[260px] md:max-w-[340px] object-contain filter brightness-0 invert"
+          style={{ filter: 'invert(68%) sepia(45%) saturate(400%) hue-rotate(5deg) brightness(95%)' }}
+        />
+        <p className="text-Krankenhaus text-sm md:text-base font-sans">
+          Cuenca, Ecuador, desde 2013
+        </p>
+        <p className="text-white text-sm md:text-base font-sans italic leading-relaxed max-w-xs md:max-w-md">
+          "Santamuerte es una banda que desafía el miedo a la muerte, tiene nombre de deidad y le rinde tributo a esa Señora con actitud de santa y cara de calavera"
+        </p>
+        <p className="text-white text-sm font-bold font-sans">— Radio Cocoa</p>
+        <img
+          src="/logos-prensa.png"
+          alt="Universal — The New York Times — Netflix"
+          className="w-full max-w-xs md:max-w-sm object-contain mt-2 opacity-80"
+        />
       </div>
     </section>
   )
