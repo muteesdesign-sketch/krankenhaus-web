@@ -44,8 +44,7 @@ function EPKHero() {
         <img
           src="/santamuerte-title.svg"
           alt="Santamuerte"
-          className="w-full max-w-[260px] md:max-w-[340px] object-contain filter brightness-0 invert"
-          style={{ filter: 'invert(68%) sepia(45%) saturate(400%) hue-rotate(5deg) brightness(95%)' }}
+          className="w-full max-w-[260px] md:max-w-[340px] object-contain"
         />
         <p className="text-Krankenhaus text-sm md:text-base font-sans">
           Cuenca, Ecuador, desde 2013
