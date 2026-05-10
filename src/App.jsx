@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaDeezer, FaAmazon } from 'react-icons/fa'
 import { SiYoutubemusic } from 'react-icons/si'
 
@@ -80,6 +80,11 @@ function MusicPlayer() {
 function Album() {
   return (
     <section className="bg-black px-8 md:px-24 py-10 flex flex-col items-start gap-2.5">
+      <img
+        src="/foto-portada.png"
+        alt="Krankenhaus (2026)"
+        className="w-full object-cover rounded-lg"
+      />
       <h2 className="w-full text-center text-Krankenhaus text-3xl md:text-4xl font-bold font-sans">
         Krankenhaus (2026)
       </h2>
@@ -95,23 +100,126 @@ function Album() {
   )
 }
 
+// ─── Carousel ────────────────────────────────────────────────────────────────
+
+const BANDA_SLIDES = [
+  '/foto-banda.png',
+  '/banda-live.png',
+  '/cara-01.png',
+  '/cara-02.png',
+  '/cara-03.png',
+  '/cara-04.png',
+  '/cara-05.png',
+  '/cara-06.png',
+  '/cara-07.png',
+  '/cara-08.png',
+  '/cara-09.png',
+  '/cara-10.png',
+]
+
+const SLIDES = [
+  '/lanzamiento-1.png',
+  '/lanzamiento-2.png',
+  '/lanzamiento-3.png',
+  '/lanzamiento-4.png',
+  '/lanzamiento-5.png',
+  '/lanzamiento-6.png',
+]
+
+function CarouselBanda() {
+  const [current, setCurrent] = useState(0)
+  const prev = () => setCurrent((i) => (i === 0 ? BANDA_SLIDES.length - 1 : i - 1))
+  const next = () => setCurrent((i) => (i === BANDA_SLIDES.length - 1 ? 0 : i + 1))
+
+  return (
+    <div className="relative w-full overflow-hidden rounded-lg">
+      <img
+        src={BANDA_SLIDES[current]}
+        alt={`Banda ${current + 1}`}
+        className="w-full object-cover"
+      />
+      <button
+        onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
+        aria-label="Anterior"
+      >‹</button>
+      <button
+        onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
+        aria-label="Siguiente"
+      >›</button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {BANDA_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
+            aria-label={`Imagen ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Carousel() {
+  const [current, setCurrent] = useState(0)
+  const prev = () => setCurrent((i) => (i === 0 ? SLIDES.length - 1 : i - 1))
+  const next = () => setCurrent((i) => (i === SLIDES.length - 1 ? 0 : i + 1))
+
+  return (
+    <div className="relative w-full md:max-w-2xl overflow-hidden rounded-lg">
+      <img
+        src={SLIDES[current]}
+        alt={`Lanzamiento ${current + 1}`}
+        className="w-full object-cover"
+      />
+      <button
+        onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
+        aria-label="Anterior"
+      >‹</button>
+      <button
+        onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
+        aria-label="Siguiente"
+      >›</button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
+            aria-label={`Imagen ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 // ─── Video en vivo ───────────────────────────────────────────────────────────
 
 function LiveVideo() {
   return (
     <section className="bg-black px-8 md:px-16 py-6 flex flex-col items-center gap-4">
       <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans">
-        El ritual: En vivo
+        Krankenhaus 360°: Experiencia Inmersiva
       </h2>
-      <img
-        src="/foto-ritual.png"
-        alt="El ritual en vivo"
-        className="w-full md:max-w-2xl object-cover rounded"
-      />
+      <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
+        El show inmersivo de Krankenhaus se ejecuta sobre un escenario central rodeado por el público. Técnicamente, la fuerza del dúo se potencia mediante un sistema de sonido envolvente 360°, el cual está sincronizado milimétricamente con proyecciones de video mapping y visuales dinámicos que envuelven todo el espacio en una experiencia audiovisual absoluta.
+      </p>
+      <Carousel />
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans mt-4">
+        Krankenhaus en vivo
+      </h2>
+      <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
+        El epicentro de Krankenhaus quedó registrado en este show de lanzamiento, consolidando una experiencia audiovisual 360° brutal y sin concesiones.
+      </p>
       <div className="relative w-full md:max-w-sm" style={{ aspectRatio: '9/16' }}>
         <iframe
           src="https://www.youtube.com/embed/U8c8pz2rgQc"
-          title="El ritual: En vivo — Santamuerte"
+          title="La Experiencia Krankenhaus — Santamuerte"
           className="absolute inset-0 w-full h-full rounded"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -136,6 +244,8 @@ function TourHighlights() {
         Quitofest — Quito, Ecuador (2023)
         <br />
         Umsonst und Draussen — Karlstadt, Alemania (2018)
+        <br />
+        Blues Trash Festival — Berlin, Alemania (2018)
       </p>
     </section>
   )
@@ -179,6 +289,11 @@ function Logros() {
 
 const HISTORIA = [
   {
+    titulo: 'Krankenhaus (2026)',
+    desc: 'Tercer LP producido por Daniel Alba.',
+    spotifyId: '5XesW7QJQmcQy6VNzazIyK',
+  },
+  {
     titulo: 'QuitoFest Live (2023)',
     desc: 'Fin de la gira Meta More Fuzz',
     spotifyId: '1a3j6f7ZfIEo8gF08PcQht',
@@ -199,12 +314,12 @@ function Historia() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-start gap-3">
       <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans">
-        La historia
+        Discografía completa
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans">
         Un resumen rápido para dar contexto a los 13 años.
       </p>
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-2">
+      <div className="w-full grid grid-cols-1 gap-8 mt-2">
         {HISTORIA.map(({ titulo, desc, spotifyId }) => (
           <div key={titulo} className="flex flex-col gap-1">
             <div className="w-full rounded-xl overflow-hidden">
@@ -238,31 +353,43 @@ function LaBanda() {
       <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans">
         La banda
       </h2>
-      <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-8">
-        <img
-          src="/foto-banda.png"
-          alt="Santamuerte — La banda"
-          className="w-full md:w-64 md:flex-shrink-0 object-cover rounded-lg"
-        />
-        <div className="flex flex-col items-center md:items-start gap-5">
-          <p className="text-center md:text-left text-white text-xs md:text-sm font-normal font-sans leading-relaxed">
-            Fundada en Ecuador en 2013, Santamuerte es un dúo de Punk Blues visceral conformado
-            por Juan F. Rojas y Sebastián Tamariz K. Con un formato crudo de guitarra y batería,
-            han transformado el underground ecuatoriano en un proyecto de impacto global,
-            alcanzando sincronizaciones en Netflix y Universal Studios, además del reconocimiento
-            de The New York Times.
-            <br />
-            <br />
-            Actualmente, la banda presenta su tercer LP, Krankenhaus (2026) —producido por Daniel
-            Alba—, un testimonio de introspección y catarsis que cobra vida en los escenarios a
-            través de un ritual escénico inmersivo, donde un ataúd, y una descarga sonora y visual
-            sin concesiones desafían el miedo a la muerte.
-          </p>
+      <div className="w-full flex flex-col items-center gap-5">
+        <CarouselBanda />
+        <p className="w-full text-center text-white text-xs md:text-sm font-normal font-sans leading-relaxed">
+          Fundada en Ecuador en 2013, Santamuerte es un dúo de Punk Blues visceral conformado
+          por Juan F. Rojas y Sebastián Tamariz K. Con un formato crudo de guitarra y batería,
+          han transformado el underground ecuatoriano en un proyecto de impacto global,
+          alcanzando sincronizaciones en Netflix y Universal Studios, además del reconocimiento
+          de The New York Times.
+          <br />
+          <br />
+          Actualmente, la banda presenta su tercer LP, Krankenhaus (2026) —producido por Daniel
+          Alba—, un testimonio de introspección y catarsis que cobra vida en los escenarios a
+          través de un ritual escénico inmersivo, donde un ataúd, y una descarga sonora y visual
+          sin concesiones desafían el miedo a la muerte.
+        </p>
+        <a
+          href="https://wa.me/593999400777"
+          className="px-10 py-3 bg-white rounded-[50px] text-black text-sm font-bold font-sans text-center"
+        >
+          Contrátanos 👈
+        </a>
+        <div className="flex flex-col items-center gap-2">
           <a
-            href="https://wa.me/593999400777"
-            className="px-10 py-3 bg-white rounded-[50px] text-black text-sm font-bold font-sans text-center"
+            href="https://drive.google.com/file/d/1gozE3ZchdKP9hirKCmpkgUaagm5c7Xc5/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
           >
-            Contrátanos 👈
+            Descargar EPK
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1lhACJW_vsqt0IS_-L7fBO8Plebe-2L2V/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
+          >
+            Descargar Rider Técnico
           </a>
         </div>
       </div>
