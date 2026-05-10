@@ -132,11 +132,11 @@ function CarouselBanda() {
   const next = () => setCurrent((i) => (i === BANDA_SLIDES.length - 1 ? 0 : i + 1))
 
   return (
-    <div className="relative w-full overflow-hidden rounded-lg">
+    <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: '1/1' }}>
       <img
         src={BANDA_SLIDES[current]}
         alt={`Banda ${current + 1}`}
-        className="w-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       <button
         onClick={prev}
@@ -168,11 +168,11 @@ function Carousel() {
   const next = () => setCurrent((i) => (i === SLIDES.length - 1 ? 0 : i + 1))
 
   return (
-    <div className="relative w-full md:max-w-2xl overflow-hidden rounded-lg">
+    <div className="relative w-full md:max-w-2xl overflow-hidden rounded-lg" style={{ aspectRatio: '16/9' }}>
       <img
         src={SLIDES[current]}
         alt={`Lanzamiento ${current + 1}`}
-        className="w-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
       <button
         onClick={prev}
