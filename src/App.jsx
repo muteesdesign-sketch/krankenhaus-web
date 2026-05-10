@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaDeezer, FaAmazon } from 'react-icons/fa'
 import { SiYoutubemusic } from 'react-icons/si'
 
@@ -375,14 +376,12 @@ function LaBanda() {
           Contrátanos 👈
         </a>
         <div className="flex flex-col items-center gap-2">
-          <a
-            href="https://drive.google.com/file/d/1gozE3ZchdKP9hirKCmpkgUaagm5c7Xc5/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/epk"
             className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
           >
-            Descargar EPK
-          </a>
+            Ver EPK
+          </Link>
           <a
             href="https://drive.google.com/file/d/1lhACJW_vsqt0IS_-L7fBO8Plebe-2L2V/view?usp=sharing"
             target="_blank"
