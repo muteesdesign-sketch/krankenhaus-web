@@ -19,14 +19,6 @@ function EPKHero() {
         />
         {/* Dark gradient top and bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
-        {/* SVG logo top center */}
-        <div className="absolute top-0 left-0 right-0 flex flex-col items-center pt-6">
-          <img
-            src="/santamuerte-title.svg"
-            alt="Santamuerte"
-            className="h-8 md:h-10 object-contain filter brightness-0 invert"
-          />
-        </div>
         {/* Back link top right */}
         <div className="absolute top-0 right-0 pt-6 pr-6">
           <Link
