@@ -199,7 +199,8 @@ function TourHighlights() {
         Relevant Music Hall — Bogotá, Colombia (2025)<br />
         Quitofest — Quito, Ecuador (2023)<br />
         Umsonst und Draussen — Karlstadt, Alemania (2018)<br />
-        Blues Trash Festival — Berlin, Alemania (2018)
+        Blues Trash Festival — Berlin, Alemania (2018)<br />
+        Michale Graves (Misfits) Opening Act — Quito, Ecuador (2017)
       </p>
     </section>
   )
