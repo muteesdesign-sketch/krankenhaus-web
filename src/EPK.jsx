@@ -333,6 +333,41 @@ function Videografia() {
   )
 }
 
+// ─── Recursos ────────────────────────────────────────────────────────────────
+
+const RECURSOS = [
+  { label: 'Descargar Fotos Hi-Res', href: '#' },
+  { label: 'Descargar Logos Oficiales', href: '#' },
+  { label: 'Descargar Rider Técnico', href: 'https://drive.google.com/file/d/1lhACJW_vsqt0IS_-L7fBO8Plebe-2L2V/view?usp=sharing' },
+  { label: 'Descargar Stage Plot', href: '#' },
+  { label: 'Descargar Krankenhaus Press Release', href: '#' },
+  { label: 'Descargar Singles (mp3 & wav)', href: '#' },
+]
+
+function Recursos() {
+  return (
+    <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania uppercase tracking-wide">
+        Recursos para Prensa &amp; Promotores
+      </h2>
+      <div className="w-full flex flex-col gap-0 border border-white/10 rounded-xl overflow-hidden">
+        {RECURSOS.map(({ label, href }, i) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center justify-between px-5 py-4 hover:bg-white/5 transition-colors ${i < RECURSOS.length - 1 ? 'border-b border-white/10' : ''}`}
+          >
+            <span className="text-white text-sm font-sans">{label}</span>
+            <span className="text-Krankenhaus text-lg">↓</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 // ─── Contactos ────────────────────────────────────────────────────────────────
 
 function Contactos() {
@@ -409,6 +444,7 @@ export default function EPK() {
       <Logros />
       <EnVivo />
       <Videografia />
+      <Recursos />
       <Contactos />
       <EPKFooter />
     </div>
