@@ -10,9 +10,10 @@ import { useTranslation, LangSwitch } from './i18n'
 function Hero() {
   return (
     <section className="bg-black flex flex-col items-center">
-      <nav className="w-full flex justify-between items-center pt-6 pb-16 px-6 absolute z-10">
-        <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-10 md:h-14 object-contain" />
-        <LangSwitch />
+      <nav className="w-full grid grid-cols-3 items-center pt-6 pb-16 px-6 absolute z-10">
+        <div />
+        <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-10 md:h-14 object-contain mx-auto" />
+        <div className="flex justify-end"><LangSwitch /></div>
       </nav>
 
       <div className="w-full relative mt-[50px]">
