@@ -96,6 +96,7 @@ export const translations = {
       designCredit: 'Diseño web: mutees.ec',
     },
     kh: {
+      heroQuote: '"Santamuerte es una banda que desafía el miedo a la muerte..."',
       albumTitle: 'Krankenhaus (2026)',
       albumQuote: '"Testimonios de un viaje mental. 10 canciones nacidas del aislamiento absoluto y la introspección obligatoria. Es Punk Blues crudo; sin adornos, solo la urgencia de volver a la sala de ensayo a reventarnos los oídos."',
       albumCredit: 'Producido por Daniel Alba.',
@@ -223,6 +224,7 @@ export const translations = {
       designCredit: 'Web design: mutees.ec',
     },
     kh: {
+      heroQuote: '"Santamuerte is a band that defies the fear of death..."',
       albumTitle: 'Krankenhaus (2026)',
       albumQuote: '"Testimonies of a mental journey. 10 songs born from absolute isolation and forced introspection. Raw Punk Blues; no frills, just the urgency to return to the rehearsal room and blow our ears off."',
       albumCredit: 'Produced by Daniel Alba.',

@@ -8,6 +8,7 @@ import { useTranslation, LangSwitch } from './i18n'
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
 function Hero() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black flex flex-col items-center">
       <nav className="w-full grid grid-cols-3 items-center pt-6 pb-16 px-6 absolute z-10">
@@ -35,7 +36,7 @@ function Hero() {
           className="w-[170px] object-contain"
         />
         <p className="text-white text-sm md:text-base max-w-xs md:max-w-md leading-relaxed">
-          "Santamuerte es una banda que desafía el miedo a la muerte..."{' '}
+          {t('kh.heroQuote')}{' '}
           <strong>— Radio Cocoa</strong>.
         </p>
         <img
