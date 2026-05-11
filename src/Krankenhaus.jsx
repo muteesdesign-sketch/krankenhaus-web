@@ -213,6 +213,7 @@ const LOGROS = [
   { nombre: 'NETFLIX', descKey: 'kh.logros.netflix' },
   { nombre: 'UNIVERSAL STUDIOS', descKey: 'kh.logros.universal' },
   { nombre: 'RADIO 3 ESPAÑA', descKey: 'kh.logros.radio3' },
+  { nombre: 'DUNKIN DONUTS', descKey: 'kh.logros.dunkin' },
 ]
 
 function Logros() {
