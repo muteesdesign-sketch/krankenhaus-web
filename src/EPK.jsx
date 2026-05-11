@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaWhatsapp, FaEnvelope
@@ -312,52 +312,6 @@ function EnVivo() {
   )
 }
 
-// ─── Videografía ─────────────────────────────────────────────────────────────
-
-const CAROUSEL_SLIDES = [
-  '/lanzamiento-1.png',
-  '/lanzamiento-2.png',
-  '/lanzamiento-3.png',
-  '/lanzamiento-4.png',
-  '/lanzamiento-5.png',
-  '/lanzamiento-6.png',
-]
-
-function VideoCarousel() {
-  const [current, setCurrent] = useState(0)
-  const prev = () => setCurrent((i) => (i === 0 ? CAROUSEL_SLIDES.length - 1 : i - 1))
-  const next = () => setCurrent((i) => (i === CAROUSEL_SLIDES.length - 1 ? 0 : i + 1))
-
-  return (
-    <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: '16/9' }}>
-      <img
-        src={CAROUSEL_SLIDES[current]}
-        alt={`Show ${current + 1}`}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <button
-        onClick={prev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
-        aria-label="Anterior"
-      >‹</button>
-      <button
-        onClick={next}
-        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors"
-        aria-label="Siguiente"
-      >›</button>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-        {CAROUSEL_SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`}
-            aria-label={`Imagen ${i + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
 
 function Videografia() {
   return (
@@ -365,11 +319,10 @@ function Videografia() {
       <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
         Videografía
       </h2>
-      <VideoCarousel />
       <div className="relative w-full md:max-w-sm" style={{ aspectRatio: '9/16' }}>
         <iframe
-          src="https://www.youtube.com/embed/U8c8pz2rgQc"
-          title="Krankenhaus en Vivo — Santamuerte"
+          src="https://www.youtube.com/embed/p_7c2-zIHnE"
+          title="Krankenhaus — Santamuerte"
           className="absolute inset-0 w-full h-full rounded"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
