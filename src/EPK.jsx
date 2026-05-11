@@ -280,11 +280,12 @@ function Logros() {
 // ─── En Vivo ─────────────────────────────────────────────────────────────────
 
 const SHOWS = [
-  { evento: 'Relevant Music Hall', lugar: 'Bogotá, Colombia', año: '2025' },
-  { evento: 'Quitofest', lugar: 'Quito, Ecuador', año: '2023' },
+  { evento: 'RELEVANT MUSIC HALL', lugar: 'Bogotá, Colombia', año: '2025' },
+  { evento: 'QUITOFEST', lugar: 'Quito, Ecuador', año: '2023' },
+  { evento: 'UMSONST UND DRAUSSEN', lugar: 'Karlstadt, Alemania', año: '2018' },
   { evento: 'Blues Trash Festival', lugar: 'Berlin, Alemania', año: '2018' },
-  { evento: 'Umsonst und Draussen', lugar: 'Karlstadt, Alemania', año: '2018' },
-  { evento: 'Krankenhaus 360°', lugar: 'Show de Lanzamiento, Ecuador', año: '2026' },
+  { evento: 'LA FIESTA DE LA MÚSICA — Alianza Francesa', lugar: 'Cuenca, Ecuador', año: '2017' },
+  { evento: 'MICHAEL GRAVES (Misfits) opening act', lugar: 'Quito, Ecuador', año: '2016' },
 ]
 
 function EnVivo() {
