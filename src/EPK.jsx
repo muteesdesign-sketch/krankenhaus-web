@@ -60,7 +60,7 @@ function EPKHero() {
 function Bio() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-4">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Quiénes somos
       </h2>
       <p className="w-full text-white text-sm md:text-base font-normal font-sans leading-relaxed text-center">
@@ -134,7 +134,7 @@ function CuentasOficiales() {
 
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Cuentas Oficiales
       </h2>
       <div className="w-full grid grid-cols-1 gap-3">
@@ -191,7 +191,7 @@ const DISCOGRAFIA = [
 function Discografia() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Discografía
       </h2>
       <div className="w-full grid grid-cols-1 gap-8">
@@ -246,7 +246,7 @@ const LOGROS_EPK = [
 function Logros() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Logros Destacados
       </h2>
       <div className="w-full flex flex-col gap-8">
@@ -291,7 +291,7 @@ const SHOWS = [
 function EnVivo() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         En Vivo
       </h2>
       <div className="w-full flex flex-col gap-0">
@@ -316,7 +316,7 @@ function EnVivo() {
 function Videografia() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Videografía
       </h2>
       <div className="relative w-full md:max-w-sm" style={{ aspectRatio: '9/16' }}>
@@ -359,7 +359,7 @@ function Contactos() {
 
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-sans uppercase tracking-wide">
+      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania uppercase tracking-wide">
         Contacto
       </h2>
       <div className="w-full flex flex-col gap-3">
