@@ -348,9 +348,9 @@ function Contactos() {
           href="https://wa.me/593999400777"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-8 py-3 bg-Krankenhaus rounded-[50px] text-black text-sm font-bold font-sans text-center hover:opacity-90 transition-opacity"
+          className="px-10 py-3 bg-white rounded-full text-black text-sm font-bold font-sans text-center hover:bg-Krankenhaus transition-colors"
         >
-          {t('common.hire')}
+          {t('common.hireEmoji')}
         </a>
         <p className="text-white/30 text-xs font-sans">{t('epk.designCredit')}</p>
       </div>
