@@ -106,7 +106,7 @@ function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-8 gap-5">
         <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-10 md:h-14 object-contain" />
-        <img src="/logo-kh.svg" alt="KRANKENHAUS" className="w-full max-w-[200px] md:max-w-[280px] object-contain" />
+        <img src="/logo-kh.svg" alt="KRANKENHAUS" className="w-[264px] md:w-[370px] object-contain" />
         <p className="text-white/80 text-sm md:text-base font-sans max-w-xs md:max-w-sm leading-relaxed">
           Punk Blues visceral desde Ecuador al mundo
         </p>
