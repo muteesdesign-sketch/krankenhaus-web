@@ -345,12 +345,12 @@ function Contactos() {
       </div>
       <div className="w-full flex flex-col items-center gap-4 pt-2">
         <a
-          href="https://linktr.ee/santamuerte"
+          href="https://wa.me/593999400777"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-3 bg-Krankenhaus rounded-[50px] text-black text-sm font-bold font-sans text-center hover:opacity-90 transition-opacity"
         >
-          Linktree
+          {t('common.hire')}
         </a>
         <p className="text-white/30 text-xs font-sans">{t('epk.designCredit')}</p>
       </div>
