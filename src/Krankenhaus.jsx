@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaDeezer, FaAmazon } from 'react-icons/fa'
 import { SiYoutubemusic } from 'react-icons/si'
+import { useTranslation, LangSwitch } from './i18n'
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
 function Hero() {
   return (
     <section className="bg-black flex flex-col items-center">
-      <nav className="w-full flex justify-center pt-6 pb-16 px-6 absolute z-10">
+      <nav className="w-full flex justify-between items-center pt-6 pb-16 px-6 absolute z-10">
         <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-10 md:h-14 object-contain" />
+        <LangSwitch />
       </nav>
 
       <div className="w-full relative mt-[50px]">
@@ -48,6 +50,7 @@ function Hero() {
 // ─── Player ──────────────────────────────────────────────────────────────────
 
 function MusicPlayer() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-16 pb-10 flex flex-col items-center gap-0">
       <div className="w-full md:max-w-2xl rounded-xl overflow-hidden">
@@ -68,7 +71,7 @@ function MusicPlayer() {
         rel="noopener noreferrer"
         className="text-Krankenhaus text-xs md:text-sm underline underline-offset-4 font-sans mt-3"
       >
-        Escuchar en otras plataformas
+        {t('common.listenOther')}
       </a>
     </section>
   )
@@ -77,6 +80,7 @@ function MusicPlayer() {
 // ─── Álbum ───────────────────────────────────────────────────────────────────
 
 function Album() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-24 py-10 flex flex-col items-start gap-2.5">
       <img
@@ -85,15 +89,13 @@ function Album() {
         className="w-full object-cover rounded-lg"
       />
       <h2 className="w-full text-center text-Krankenhaus text-3xl md:text-4xl font-bold font-germania">
-        Krankenhaus (2026)
+        {t('kh.albumTitle')}
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
-        "Testimonios de un viaje mental. 10 canciones nacidas del aislamiento absoluto y la
-        introspección obligatoria. Es Punk Blues crudo; sin adornos, solo la urgencia de volver
-        a la sala de ensayo a reventarnos los oídos."
+        {t('kh.albumQuote')}
       </p>
       <p className="w-full text-center text-white text-xs md:text-sm font-bold font-sans">
-        Producido por Daniel Alba.
+        {t('kh.albumCredit')}
       </p>
     </section>
   )
@@ -152,20 +154,21 @@ function Carousel() {
 // ─── Video en vivo ───────────────────────────────────────────────────────────
 
 function LiveVideo() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-16 py-6 flex flex-col items-center gap-4">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
-        Krankenhaus 360°: Experiencia Inmersiva
+        {t('kh.liveTitle')}
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
-        El show inmersivo de Krankenhaus se ejecuta sobre un escenario central rodeado por el público. Técnicamente, la fuerza del dúo se potencia mediante un sistema de sonido envolvente 360°, el cual está sincronizado milimétricamente con proyecciones de video mapping y visuales dinámicos que envuelven todo el espacio en una experiencia audiovisual absoluta.
+        {t('kh.liveDesc')}
       </p>
       <Carousel />
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania mt-4">
-        Krankenhaus en vivo
+        {t('kh.liveTitle2')}
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
-        El epicentro de Krankenhaus quedó registrado en este show de lanzamiento, consolidando una experiencia audiovisual 360° brutal y sin concesiones.
+        {t('kh.liveDesc2')}
       </p>
       <div className="relative w-full md:max-w-sm" style={{ aspectRatio: '9/16' }}>
         <iframe
@@ -184,10 +187,11 @@ function LiveVideo() {
 // ─── Tour Highlights ─────────────────────────────────────────────────────────
 
 function TourHighlights() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-24 py-10 flex flex-col items-start gap-3">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
-        Highlights de Gira
+        {t('kh.tourTitle')}
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-loose">
         Relevant Music Hall — Bogotá, Colombia (2025)<br />
@@ -202,23 +206,24 @@ function TourHighlights() {
 // ─── Logros ──────────────────────────────────────────────────────────────────
 
 const LOGROS = [
-  { nombre: 'NEW YORK TIMES', desc: 'Música para el documental "The fastest girl alive - Nike".' },
-  { nombre: 'NETFLIX', desc: 'Música para la serie "Tex Mex Motors".' },
-  { nombre: 'UNIVERSAL STUDIOS', desc: 'Música para Halloween Horror Nights (Orlando).' },
-  { nombre: 'RADIO 3 ESPAÑA', desc: 'Disco de la Semana 2016.' },
+  { nombre: 'NEW YORK TIMES', descKey: 'kh.logros.nyt' },
+  { nombre: 'NETFLIX', descKey: 'kh.logros.netflix' },
+  { nombre: 'UNIVERSAL STUDIOS', descKey: 'kh.logros.universal' },
+  { nombre: 'RADIO 3 ESPAÑA', descKey: 'kh.logros.radio3' },
 ]
 
 function Logros() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-start gap-3">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
-        Logros destacados
+        {t('kh.logrosTitle')}
       </h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-        {LOGROS.map(({ nombre, desc }) => (
+        {LOGROS.map(({ nombre, descKey }) => (
           <div key={nombre} className="flex flex-col items-center gap-1">
             <p className="text-white text-sm md:text-base font-bold font-sans">{nombre}</p>
-            <p className="text-white text-xs md:text-sm font-normal font-sans text-center">{desc}</p>
+            <p className="text-white text-xs md:text-sm font-normal font-sans text-center">{t(descKey)}</p>
           </div>
         ))}
       </div>
@@ -232,23 +237,24 @@ function Logros() {
 // ─── Historia ────────────────────────────────────────────────────────────────
 
 const HISTORIA = [
-  { titulo: 'Krankenhaus (2026)', desc: 'Tercer LP producido por Daniel Alba.', spotifyId: '5XesW7QJQmcQy6VNzazIyK' },
-  { titulo: 'QuitoFest Live (2023)', desc: 'Fin de la gira Meta More Fuzz', spotifyId: '1a3j6f7ZfIEo8gF08PcQht' },
-  { titulo: 'Meta More Fuzz (2022)', desc: 'La metamorfosis entre Alemania y Ecuador.', spotifyId: '4rJqHdsdaqONdDZarNQGiH' },
-  { titulo: 'Letras de mi Muerte (2015)', desc: 'El origen en los bares, el caos y el vinilo.', spotifyId: '70dngU4WETGLasnW66PLLP' },
+  { titulo: 'Krankenhaus (2026)', descKey: 'kh.historia.kh', spotifyId: '5XesW7QJQmcQy6VNzazIyK' },
+  { titulo: 'QuitoFest Live (2023)', descKey: 'kh.historia.qf', spotifyId: '1a3j6f7ZfIEo8gF08PcQht' },
+  { titulo: 'Meta More Fuzz (2022)', descKey: 'kh.historia.mmf', spotifyId: '4rJqHdsdaqONdDZarNQGiH' },
+  { titulo: 'Letras de mi Muerte (2015)', descKey: 'kh.historia.ldmm', spotifyId: '70dngU4WETGLasnW66PLLP' },
 ]
 
 function Historia() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-start gap-3">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
-        Discografía completa
+        {t('kh.historiaTitle')}
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans">
-        Un resumen rápido para dar contexto a los 13 años.
+        {t('kh.historiaSub')}
       </p>
       <div className="w-full grid grid-cols-1 gap-8 mt-2">
-        {HISTORIA.map(({ titulo, desc, spotifyId }) => (
+        {HISTORIA.map(({ titulo, descKey, spotifyId }) => (
           <div key={titulo} className="flex flex-col gap-1">
             <div className="w-full rounded-xl overflow-hidden">
               <iframe
@@ -260,7 +266,7 @@ function Historia() {
             </div>
             <p className="w-full text-center text-sm font-sans mt-1">
               <strong className="text-white font-bold">{titulo}: </strong>
-              <span className="text-white font-normal text-xs">{desc}</span>
+              <span className="text-white font-normal text-xs">{t(descKey)}</span>
             </p>
           </div>
         ))}
@@ -272,41 +278,36 @@ function Historia() {
 // ─── La Banda ────────────────────────────────────────────────────────────────
 
 function LaBanda() {
+  const { t } = useTranslation()
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-5">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
-        La banda
+        {t('kh.bandaTitle')}
       </h2>
       <div className="w-full flex flex-col items-center gap-5">
         <CarouselBanda />
         <p className="w-full text-center text-white text-xs md:text-sm font-normal font-sans leading-relaxed">
-          Fundada en Ecuador en 2013, Santamuerte es un dúo de Punk Blues visceral conformado
-          por Juan F. Rojas y Sebastián Tamariz K. Con un formato crudo de guitarra y batería,
-          han transformado el underground ecuatoriano en un proyecto de impacto global,
-          alcanzando sincronizaciones en Netflix y Universal Studios, además del reconocimiento
-          de The New York Times.
-          <br /><br />
-          Actualmente, la banda presenta su tercer LP, Krankenhaus (2026) —producido por Daniel
-          Alba—, un testimonio de introspección y catarsis que cobra vida en los escenarios a
-          través de un ritual escénico inmersivo, donde un ataúd, y una descarga sonora y visual
-          sin concesiones desafían el miedo a la muerte.
+          {t('kh.bandaBio1')}
+        </p>
+        <p className="w-full text-center text-white text-xs md:text-sm font-normal font-sans leading-relaxed">
+          {t('kh.bandaBio2')}
         </p>
         <a
           href="https://wa.me/593999400777"
           className="px-10 py-3 bg-white rounded-[50px] text-black text-sm font-bold font-sans text-center"
         >
-          Contrátanos 👈
+          {t('common.hireEmoji')}
         </a>
         <div className="flex flex-col items-center gap-2">
           <Link to="/epk" className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans">
-            Ver EPK
+            {t('common.viewEpk')}
           </Link>
           <a
             href="https://drive.google.com/file/d/1lhACJW_vsqt0IS_-L7fBO8Plebe-2L2V/view?usp=sharing"
             target="_blank" rel="noopener noreferrer"
             className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
           >
-            Descargar Rider Técnico
+            {t('kh.downloadRider')}
           </a>
         </div>
       </div>
@@ -317,6 +318,7 @@ function LaBanda() {
 // ─── Footer ──────────────────────────────────────────────────────────────────
 
 function Footer() {
+  const { t } = useTranslation()
   const sociales = [
     { icon: FaInstagram, href: 'https://www.instagram.com/santamuerte.de/', label: 'Instagram' },
     { icon: FaYoutube, href: 'https://www.youtube.com/@santamuertemusic', label: 'YouTube' },
@@ -335,7 +337,7 @@ function Footer() {
     <footer className="bg-black px-8 md:px-16 pt-10 pb-12 flex flex-col items-center gap-8 border-t border-zinc-900">
       <img src="/logo-santamuerte.svg" alt="Santamuerte" className="h-8 object-contain opacity-80" />
       <div className="flex flex-col items-center gap-3">
-        <p className="text-gray-600 text-[10px] tracking-widest uppercase">Redes sociales</p>
+        <p className="text-gray-600 text-[10px] tracking-widest uppercase">{t('kh.footerSocials')}</p>
         <div className="flex items-center gap-6">
           {sociales.map(({ icon: Icon, href, label }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/60 hover:text-white transition-colors duration-200">
@@ -345,7 +347,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-3">
-        <p className="text-gray-600 text-[10px] tracking-widest uppercase">Escúchanos en</p>
+        <p className="text-gray-600 text-[10px] tracking-widest uppercase">{t('common.listenOn')}</p>
         <div className="flex items-center gap-6 flex-wrap justify-center">
           {streaming.map(({ icon: Icon, href, label }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/60 hover:text-white transition-colors duration-200">
@@ -359,10 +361,10 @@ function Footer() {
         target="_blank" rel="noopener noreferrer"
         className="flex items-center gap-2 px-6 py-3 border border-Krankenhaus rounded-full text-Krankenhaus text-sm font-bold font-sans hover:bg-Krankenhaus hover:text-black transition-all duration-200"
       >
-        <span>💀</span><span>Únete a la comunidad</span><span>💀</span>
+        <span>💀</span><span>{t('common.community')}</span><span>💀</span>
       </a>
       <p className="text-gray-700 text-[10px] tracking-widest">
-        © {new Date().getFullYear()} Santamuerte. Todos los derechos reservados.
+        © {new Date().getFullYear()} Santamuerte. {t('common.rights')}
       </p>
     </footer>
   )
