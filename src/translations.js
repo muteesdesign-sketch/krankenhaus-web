@@ -130,8 +130,8 @@ export const translations = {
   },
   en: {
     common: {
-      hire: 'Hire Us',
-      hireEmoji: 'Hire Us 👈',
+      hire: 'Book Us',
+      hireEmoji: 'Book Us 👈',
       viewEpk: 'View EPK',
       technicalRider: 'Technical Rider',
       listenOther: 'Listen on other platforms',
