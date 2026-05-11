@@ -51,9 +51,9 @@ function Navbar() {
             href="https://wa.me/593999400777"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-Krankenhaus text-Krankenhaus text-xs font-bold font-sans rounded-full hover:bg-Krankenhaus hover:text-black transition-all"
+            className="px-4 py-2 bg-white text-black text-xs font-bold font-sans rounded-full hover:bg-Krankenhaus transition-colors"
           >
-            {t('common.hire')}
+            {t('common.hireEmoji')}
           </a>
         </div>
 
@@ -84,9 +84,9 @@ function Navbar() {
             href="https://wa.me/593999400777"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-3 bg-Krankenhaus text-black text-sm font-bold font-sans rounded-full text-center"
+            className="px-4 py-3 bg-white text-black text-sm font-bold font-sans rounded-full text-center hover:bg-Krankenhaus transition-colors"
           >
-            {t('common.hire')}
+            {t('common.hireEmoji')}
           </a>
         </div>
       )}
@@ -127,9 +127,9 @@ function Hero() {
             href="https://wa.me/593999400777"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 border border-white text-white text-sm font-bold font-sans rounded-full hover:bg-white hover:text-black transition-all w-full sm:w-auto text-center"
+            className="px-8 py-3 bg-white text-black text-sm font-bold font-sans rounded-full hover:bg-Krankenhaus transition-colors w-full sm:w-auto text-center"
           >
-            {t('common.hire')}
+            {t('common.hireEmoji')}
           </a>
         </div>
       </div>
