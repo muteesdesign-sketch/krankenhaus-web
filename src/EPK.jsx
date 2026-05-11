@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import {
   FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaWhatsapp, FaEnvelope
 } from 'react-icons/fa'
@@ -437,6 +438,21 @@ function EPKFooter() {
 export default function EPK() {
   return (
     <div className="bg-black min-h-screen text-white antialiased max-w-[390px] md:max-w-3xl mx-auto">
+      <Helmet>
+        <title>EPK — Santamuerte | Punk Blues desde Ecuador</title>
+        <meta name="description" content="Electronic Press Kit oficial de Santamuerte. Dúo de Punk Blues de Cuenca, Ecuador. Discografía, logros, shows en vivo, videos y contacto para booking." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="EPK — Santamuerte | Punk Blues desde Ecuador" />
+        <meta property="og:description" content="Electronic Press Kit oficial de Santamuerte. Sincronizaciones en Netflix, Universal Studios y The New York Times. Booking y prensa." />
+        <meta property="og:url" content="https://krankenhaus-web.vercel.app/epk" />
+        <meta property="og:image" content="https://krankenhaus-web.vercel.app/foto-portada-9.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EPK — Santamuerte | Punk Blues desde Ecuador" />
+        <meta name="twitter:description" content="Electronic Press Kit oficial de Santamuerte. Booking, prensa y recursos para promotores." />
+        <meta name="twitter:image" content="https://krankenhaus-web.vercel.app/foto-portada-9.png" />
+        <link rel="canonical" href="https://krankenhaus-web.vercel.app/epk" />
+      </Helmet>
       <EPKHero />
       <Bio />
       <CuentasOficiales />

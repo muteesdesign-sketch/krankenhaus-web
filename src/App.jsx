@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook, FaSpotify, FaApple, FaDeezer, FaAmazon } from 'react-icons/fa'
 import { SiYoutubemusic } from 'react-icons/si'
 
@@ -478,6 +479,18 @@ function Footer() {
 export default function App() {
   return (
     <div className="bg-black min-h-screen text-white antialiased max-w-[390px] md:max-w-3xl mx-auto">
+      <Helmet>
+        <title>KRANKENHAUS — Santamuerte</title>
+        <meta name="description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
+        <meta property="og:title" content="KRANKENHAUS — Santamuerte" />
+        <meta property="og:description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
+        <meta property="og:url" content="https://krankenhaus-web.vercel.app/" />
+        <meta property="og:image" content="https://krankenhaus-web.vercel.app/habitacion.png" />
+        <meta name="twitter:title" content="KRANKENHAUS — Santamuerte" />
+        <meta name="twitter:description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
+        <meta name="twitter:image" content="https://krankenhaus-web.vercel.app/habitacion.png" />
+        <link rel="canonical" href="https://krankenhaus-web.vercel.app/" />
+      </Helmet>
       <Hero />
       <MusicPlayer />
       <Album />
