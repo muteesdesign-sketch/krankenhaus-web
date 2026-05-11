@@ -255,7 +255,7 @@ function Logros() {
             <p className="text-white/50 text-[10px] tracking-widest uppercase font-sans border-b border-white/10 pb-2">
               {album}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
               {items.map(({ brand, desc }) => (
                 <div key={brand} className="flex flex-col gap-1">
                   <p className="text-white text-xs font-bold font-sans tracking-wider">{brand}</p>
