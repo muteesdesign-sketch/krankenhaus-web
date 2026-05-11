@@ -29,7 +29,7 @@ function Hero() {
         <img
           src="/logo-kh.svg"
           alt="KRANKENHAUS"
-          className="w-[264px] md:w-[370px] object-contain"
+          className="w-[170px] object-contain"
         />
         <p className="text-white text-sm md:text-base max-w-xs md:max-w-md leading-relaxed">
           "Santamuerte es una banda que desafía el miedo a la muerte..."{' '}
