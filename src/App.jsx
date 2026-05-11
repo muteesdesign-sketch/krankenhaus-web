@@ -460,9 +460,11 @@ function Footer() {
         href="https://docs.google.com/forms/d/e/1FAIpQLScD5Uiz06-EvYGdNOp2roNrXus5sPh1UHvoc2y2EzlEr3eWqg/viewform?usp=header"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
+        className="flex items-center gap-2 px-6 py-3 border border-Krankenhaus rounded-full text-Krankenhaus text-sm font-bold font-sans hover:bg-Krankenhaus hover:text-black transition-all duration-200"
       >
-        Únete a nuestra comunidad
+        <span>💀</span>
+        <span>Únete a la comunidad</span>
+        <span>💀</span>
       </a>
       <p className="text-gray-700 text-[10px] tracking-widest">
         © {new Date().getFullYear()} Santamuerte. Todos los derechos reservados.
