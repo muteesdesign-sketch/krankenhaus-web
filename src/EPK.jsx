@@ -337,7 +337,7 @@ function Videografia() {
 
 const RECURSOS = [
   { label: 'Descargar Fotos Hi-Res', href: 'https://drive.google.com/drive/folders/1EJLrXF0Ynfi0MfDF5JJOKccTy3UUj87v' },
-  { label: 'Descargar Logos Oficiales', href: 'https://drive.google.com/drive/folders/1EJLrXF0Ynfi0MfDF5JJOKccTy3UUj87v' },
+  { label: 'Descargar Logos Oficiales', href: 'https://drive.google.com/drive/folders/1mrcthjjK_mzGN72cRuPkkniG5mJoMR0C?usp=sharing' },
   { label: 'Descargar Rider Técnico', href: 'https://drive.google.com/file/d/1lhACJW_vsqt0IS_-L7fBO8Plebe-2L2V/view?usp=sharing' },
   { label: 'Descargar Stage Plot', href: 'https://drive.google.com/file/d/1w9BSwLrGp2ftLDnCvYTJa6ClyODBQLwE/view?usp=sharing' },
   { label: 'Descargar Krankenhaus Press Release', href: 'https://drive.google.com/drive/folders/1QYWlJi7vZEzio0fTyZzFb9G2yxRCiwNU?usp=sharing' },
