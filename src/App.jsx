@@ -484,12 +484,12 @@ export default function App() {
         <meta name="description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
         <meta property="og:title" content="KRANKENHAUS — Santamuerte" />
         <meta property="og:description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
-        <meta property="og:url" content="https://krankenhaus-web.vercel.app/" />
-        <meta property="og:image" content="https://krankenhaus-web.vercel.app/habitacion.png" />
+        <meta property="og:url" content="https://santamuertemusic.com/" />
+        <meta property="og:image" content="https://santamuertemusic.com/habitacion.png" />
         <meta name="twitter:title" content="KRANKENHAUS — Santamuerte" />
         <meta name="twitter:description" content="Santamuerte presenta KRANKENHAUS (2026), su tercer LP producido por Daniel Alba. Punk Blues visceral desde Ecuador al mundo." />
-        <meta name="twitter:image" content="https://krankenhaus-web.vercel.app/habitacion.png" />
-        <link rel="canonical" href="https://krankenhaus-web.vercel.app/" />
+        <meta name="twitter:image" content="https://santamuertemusic.com/habitacion.png" />
+        <link rel="canonical" href="https://santamuertemusic.com/" />
       </Helmet>
       <Hero />
       <MusicPlayer />
