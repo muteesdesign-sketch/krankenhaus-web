@@ -226,20 +226,19 @@ function Discografia() {
 
 const LOGROS_EPK = [
   {
-    album: 'Letras de mi Muerte (2015)',
+    album: 'Letras de mi Muerte',
     items: [
-      { brand: 'RADIO 3 ESPAÑA', desc: 'Disco de la Semana 2016.' },
-      { brand: 'THE NEW YORK TIMES', desc: 'Música para el documental "The Fastest Girl Alive — Nike".' },
-      { brand: 'NETFLIX', desc: 'Música para la serie "Tex Mex Motors".' },
-      { brand: 'UNIVERSAL STUDIOS', desc: 'Música para Halloween Horror Nights (Orlando).' },
+      { brand: '"RADIO 3" ESPAÑA', desc: 'Disco de la Semana -2015-' },
+      { brand: 'NETFLIX', desc: 'Soundtrack de la serie TEX MEX MOTORS -2023-' },
+      { brand: '"UNIVERSAL STUDIOS" ORLANDO, EEUU', desc: 'Halloween Horror Nights -2022-' },
+      { brand: 'NEW YORK TIMES', desc: '"I was the Fastest Girl In America, Until I Joined Nike / NYT Opinion" -2019-' },
+      { brand: 'DUNKIN DONUTS', desc: 'Soundtrack en video comercial para EEUU -2019-' },
     ],
   },
   {
-    album: 'Meta More Fuzz (2022)',
+    album: 'Meta More Fuzz',
     items: [
-      { brand: 'QUITOFEST 2023', desc: 'Headliners en el festival más grande de Ecuador.' },
-      { brand: 'GIRA EUROPA', desc: 'Presentaciones en Alemania, incluyendo el Blues Trash Festival Berlin.' },
-      { brand: 'RELEVANT MUSIC HALL', desc: 'Sold out en Bogotá, Colombia (2025).' },
+      { brand: '"Initiative Musik gGmgH" ALEMANIA', desc: 'Ganadores de los fondos concursables -2021-' },
     ],
   },
 ]
