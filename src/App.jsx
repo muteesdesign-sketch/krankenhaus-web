@@ -456,6 +456,14 @@ function Footer() {
         </div>
       </div>
 
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScD5Uiz06-EvYGdNOp2roNrXus5sPh1UHvoc2y2EzlEr3eWqg/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-Krankenhaus text-xs underline underline-offset-4 hover:text-white transition-colors font-sans"
+      >
+        Únete a nuestra comunidad
+      </a>
       <p className="text-gray-700 text-[10px] tracking-widest">
         © {new Date().getFullYear()} Santamuerte. Todos los derechos reservados.
       </p>
