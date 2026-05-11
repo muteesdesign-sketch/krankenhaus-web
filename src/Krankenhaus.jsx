@@ -224,8 +224,8 @@ function Logros() {
         {t('kh.logrosTitle')}
       </h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-        {LOGROS.map(({ nombre, descKey }) => (
-          <div key={nombre} className="flex flex-col items-center gap-1">
+        {LOGROS.map(({ nombre, descKey }, i, arr) => (
+          <div key={nombre} className={`flex flex-col items-center gap-1 ${i === arr.length - 1 && arr.length % 2 !== 0 ? 'md:col-span-2' : ''}`}>
             <p className="text-white text-sm md:text-base font-bold font-sans">{nombre}</p>
             <p className="text-white text-xs md:text-sm font-normal font-sans text-center">{t(descKey)}</p>
           </div>
