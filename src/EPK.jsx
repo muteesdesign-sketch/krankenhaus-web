@@ -336,48 +336,36 @@ function Videografia() {
 // ─── Contactos ────────────────────────────────────────────────────────────────
 
 function Contactos() {
-  const contactos = [
-    {
-      icon: FaEnvelope,
-      label: 'Email',
-      value: 'vudusessions@gmail.com',
-      href: 'mailto:vudusessions@gmail.com',
-    },
-    {
-      icon: FaWhatsapp,
-      label: 'WhatsApp (booking)',
-      value: '+593 99 940 0777',
-      href: 'https://wa.me/593999400777',
-    },
-    {
-      icon: FaWhatsapp,
-      label: 'WhatsApp (prensa)',
-      value: '+593 98 642 5412',
-      href: 'https://wa.me/593986425412',
-    },
-  ]
-
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-6">
       <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania uppercase tracking-wide">
-        Contacto
+        Contactos
       </h2>
-      <div className="w-full flex flex-col gap-3">
-        {contactos.map(({ icon: Icon, label, value, href }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 px-5 py-3.5 border border-white/10 rounded-xl hover:border-Krankenhaus transition-colors bg-white/5"
-          >
-            <Icon size={20} className="text-Krankenhaus" />
-            <div className="flex flex-col">
-              <span className="text-white/50 text-[10px] uppercase tracking-widest font-sans">{label}</span>
+      <div className="w-full flex flex-col gap-0 border border-white/10 rounded-xl overflow-hidden">
+        <p className="text-white/50 text-xs uppercase tracking-widest font-sans px-5 pt-5 pb-3 border-b border-white/10">
+          Booking &amp; Management (Latinamerica &amp; USA)
+        </p>
+        <div className="flex flex-col gap-0">
+          {[
+            { icon: FaEnvelope, label: 'E-MAIL', value: 'vudusessions@gmail.com', href: 'mailto:vudusessions@gmail.com' },
+            { icon: FaWhatsapp, label: 'EC', value: '+593 99 940 0777', href: 'https://wa.me/593999400777' },
+            { icon: FaWhatsapp, label: 'EC', value: '+593 98 642 5412', href: 'https://wa.me/593986425412' },
+            { icon: null, label: 'WEBSITE', value: 'www.linktree.com/santamuerte', href: 'https://linktr.ee/santamuerte' },
+            { icon: null, label: 'MERCHANDISE', value: 'www.mutees.ec', href: 'https://www.mutees.ec' },
+          ].map(({ icon: Icon, label, value, href }, i, arr) => (
+            <a
+              key={label + value}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors ${i < arr.length - 1 ? 'border-b border-white/10' : ''}`}
+            >
+              {Icon ? <Icon size={16} className="text-Krankenhaus shrink-0" /> : <span className="w-4 shrink-0" />}
+              <span className="text-white/50 text-xs font-sans w-24 shrink-0">{label}:</span>
               <span className="text-white text-sm font-sans">{value}</span>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
       <div className="w-full flex flex-col items-center gap-4 pt-2">
         <a
