@@ -204,14 +204,14 @@ function Carousel() {
 function LiveVideo() {
   return (
     <section className="bg-black px-8 md:px-16 py-6 flex flex-col items-center gap-4">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
         Krankenhaus 360°: Experiencia Inmersiva
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
         El show inmersivo de Krankenhaus se ejecuta sobre un escenario central rodeado por el público. Técnicamente, la fuerza del dúo se potencia mediante un sistema de sonido envolvente 360°, el cual está sincronizado milimétricamente con proyecciones de video mapping y visuales dinámicos que envuelven todo el espacio en una experiencia audiovisual absoluta.
       </p>
       <Carousel />
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania mt-4">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania mt-4">
         Krankenhaus en vivo
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-relaxed">
@@ -236,7 +236,7 @@ function LiveVideo() {
 function TourHighlights() {
   return (
     <section className="bg-black px-8 md:px-24 py-10 flex flex-col items-start gap-3">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
         Highlights de Gira
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans leading-loose">
@@ -264,7 +264,7 @@ const LOGROS = [
 function Logros() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-start gap-3">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
         Logros destacados
       </h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
@@ -314,7 +314,7 @@ const HISTORIA = [
 function Historia() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-start gap-3">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
         Discografía completa
       </h2>
       <p className="w-full text-center text-white text-sm md:text-base font-normal font-sans">
@@ -351,7 +351,7 @@ function Historia() {
 function LaBanda() {
   return (
     <section className="bg-black px-8 md:px-16 py-10 flex flex-col items-center gap-5">
-      <h2 className="w-full text-center text-Krankenhaus text-xl md:text-2xl font-bold font-germania">
+      <h2 className="w-full text-center text-Krankenhaus text-2xl md:text-3xl font-bold font-germania">
         La banda
       </h2>
       <div className="w-full flex flex-col items-center gap-5">
