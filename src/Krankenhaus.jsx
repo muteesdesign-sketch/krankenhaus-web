@@ -123,10 +123,12 @@ function CarouselBanda() {
   const next = () => setCurrent((i) => (i === BANDA_SLIDES.length - 1 ? 0 : i + 1))
   return (
     <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: '1/1' }}>
-      <img src={BANDA_SLIDES[current]} alt={`Banda ${current + 1}`} className="absolute inset-0 w-full h-full object-cover" />
-      <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors" aria-label="Anterior">‹</button>
-      <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors" aria-label="Siguiente">›</button>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+      {BANDA_SLIDES.map((src, i) => (
+        <img key={src} src={src} alt={`Banda ${i + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${i === current ? 'opacity-100' : 'opacity-0'}`} />
+      ))}
+      <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors z-10" aria-label="Anterior">‹</button>
+      <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors z-10" aria-label="Siguiente">›</button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {BANDA_SLIDES.map((_, i) => (
           <button key={i} onClick={() => setCurrent(i)} className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`} aria-label={`Imagen ${i + 1}`} />
         ))}
@@ -141,10 +143,12 @@ function Carousel() {
   const next = () => setCurrent((i) => (i === SLIDES.length - 1 ? 0 : i + 1))
   return (
     <div className="relative w-full md:max-w-2xl overflow-hidden rounded-lg" style={{ aspectRatio: '16/9' }}>
-      <img src={SLIDES[current]} alt={`Lanzamiento ${current + 1}`} className="absolute inset-0 w-full h-full object-cover" />
-      <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors" aria-label="Anterior">‹</button>
-      <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors" aria-label="Siguiente">›</button>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+      {SLIDES.map((src, i) => (
+        <img key={src} src={src} alt={`Lanzamiento ${i + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${i === current ? 'opacity-100' : 'opacity-0'}`} />
+      ))}
+      <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors z-10" aria-label="Anterior">‹</button>
+      <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 text-white text-2xl hover:bg-black/80 transition-colors z-10" aria-label="Siguiente">›</button>
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
         {SLIDES.map((_, i) => (
           <button key={i} onClick={() => setCurrent(i)} className={`w-2 h-2 rounded-full transition-colors ${i === current ? 'bg-white' : 'bg-white/40'}`} aria-label={`Imagen ${i + 1}`} />
         ))}
